@@ -7,6 +7,6 @@
 1 0 0 1 0 0 1
 1 1 0 0 0 1 1
 
-Color: 11
-StartX: 1
-StartY = 1
+Color: 5
+StartX: 0
+StartY = 0
