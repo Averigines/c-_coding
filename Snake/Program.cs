@@ -44,7 +44,7 @@ namespace Snake {
                 MoveSnake(_lastKey.Value);
             }
 
-            nextUpdate = DateTime.Now.AddMilliseconds(500);
+            nextUpdate = DateTime.Now.AddMilliseconds(500/(_score+1));
 
             return true;
         }
