@@ -15,7 +15,7 @@
         }
 
         static void BubbleSort(int[] arr) {
-            for (int i = 0; i<arr.Length-1; i++) {
+            for (int i = 0; i < arr.Length-1; i++) {
                 for (int j = 0; j < arr.Length-i-1; j++) {
                     if (arr[j] > arr[j+1]) {
                         int temp = arr[j+1];
@@ -97,7 +97,7 @@
         // Write result array to console
         static void WriteArray(int[] arr, string msg) {
             Console.Write(msg);
-            for(int i = 0; i < arr.Length; i++) {
+            for (int i = 0; i < arr.Length; i++) {
                 Console.Write(arr[i] + " ");
             }
             Console.WriteLine();
