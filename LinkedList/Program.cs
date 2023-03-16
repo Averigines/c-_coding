@@ -1,66 +1,51 @@
-﻿namespace LinkedList;
-    
+﻿namespace LinkedList
+{
     class Program
     {
-        static void Main(string[] args)
+        // Where the application begins
+        static void Main(string[] args) 
         {
+            // Single linked list
             SingleLinkedList singleList = new SingleLinkedList();
             singleList.InsertLast(4);
-            singleList.InsertLast(3);
             singleList.InsertLast(6);
-            singleList.InsertLast(12);
-            singleList.InsertLast(2);
-            singleList.PrintList();
-
-            singleList.deleteNodebyKey(12);
-            singleList.PrintList();
-
-            singleList.InsertAfter(singleList.FindbyKey(6), 12);
-            singleList.PrintList();
+            singleList.InsertFront(2);
+            singleList.printList();
+            singleList.DeleteNodebyKey(2);
+            singleList.printList();
+            singleList.InsertAfter(singleList.FindbyKey(4),5);
+            singleList.printList();
         }
     }
 
-    // list member is {data; adress} so we need a class that contain both data
-    public class Node 
+    public class Node
     {
         // Fields
         private int _data;
         private Node? _next;
-
-        private Node? _prev;
 
         // Constructors
         public Node(int d)
         {
             _data = d;
             _next = null;
-            _prev = null;
         }
 
         // Getters and Setters
         public int Data
         {
-            get { return _data;} // shortend of having a Getage() function with a return
-            set { _data = value;}
+            get { return _data; }
+            set { _data = value; }
         }
 
         public Node? Next
         {
-            get {return _next;}
-            set {_next = value;}
+            get { return _next; }
+            set { _next = value; }
         }
 
-        public Node? Prev {
-            get {return _prev;}
-            set {_prev = value;}
-        }
-
-        // Methods
-
-        // Finalisers
-        ~Node() {
-            //to do on destruction
-        }
+        // Finalizers
+        ~Node() { }
     }
 
     public class SingleLinkedList
@@ -69,219 +54,120 @@
         private Node? _head;
 
         // Constructors
-        public SingleLinkedList() 
+        public SingleLinkedList()
         {
             _head = null;
         }
 
-        // Getters and setters
+        // Getters and Setters
         public Node? Head
         {
             get { return _head; }
             set { _head = value; }
         }
 
+        // Finalizer
+        ~SingleLinkedList() { }
+
         // Methods
-        // InsertFront
-        public void InsertFront(int newData) {
-            Node newNode = new Node(newData);
-            newNode.Next= _head;
-            _head = newNode;
+        public void InsertFront(int new_data)
+        {
+            Node new_node = new Node(new_data);
+            new_node.Next = _head;
+            _head = new_node;
         }
-        // InsertLast
-        public void InsertLast(int newData) {
-            Node newNode = new Node(newData);
-            // first check if list is empty
-            if (_head == null) {
-                _head = newNode;
-            } else {
+
+        public void InsertLast(int new_data)
+        {
+            Node new_node = new Node(new_data);
+            if (_head == null)
+            {
+                _head = new_node;
+            }
+            else
+            {
                 Node? lastNode = GetLastNode();
-                if (lastNode != null) {
-                    lastNode.Next = newNode;
+
+                if (lastNode != null)
+                {
+                    lastNode.Next = new_node;
                 }
             }
         }
-        // GetLastNode
-        public Node? GetLastNode() {
+
+        public Node? GetLastNode()
+        {
             Node? temp = _head;
-            while ((temp != null) && (temp.Next != null)) {
+            while ((temp != null) && (temp.Next != null))
+            {
                 temp = temp.Next;
             }
             return temp;
         }
-        // InsertAfter
-        public void InsertAfter(Node? preNode, int newData) {
-            if (preNode == null) {
-                Console.WriteLine("The node cannot be null here!");
-            } else {
+
+        public void InsertAfter(Node? prevNode, int newData)
+        {
+            if (prevNode == null)
+            {
+                Console.WriteLine("The given previous node Cannot be null!");
+            }
+            else
+            {
                 Node newNode = new Node(newData);
-                newNode.Next = preNode.Next;
-                preNode.Next = newNode;
+                newNode.Next = prevNode.Next;
+                prevNode.Next = newNode;
             }
         }
-        // FindbyKey
-        public Node? FindbyKey(int data) {
+
+        public Node? FindbyKey(int data)
+        {
             Node? temp = _head;
-            while(temp != null) {
-                if (temp.Data == data) {
+
+            while (temp != null)
+            {
+                if (temp.Data == data)
                     return temp;
-                }
                 temp = temp.Next;
             }
             return null;
         }
-        // DeleteNodebyKey
-        public void deleteNodebyKey(int key) {
+
+        public void DeleteNodebyKey(int key)
+        {
             Node? temp = _head;
             Node? prev = null;
 
-            // if key = _head, this means that the searched node is the first one
-            if ((temp != null) && (temp.Data == key)) {
+            // The key is equal to head
+            if (temp != null && temp.Data == key)
+            {
                 _head = temp.Next;
+                return;
             }
-
-            while ((temp != null) && (temp.Data != key)) {
+            while (temp != null && temp.Data != key)
+            {
                 prev = temp;
                 temp = temp.Next;
             }
-
-            // case if you don't find key in the list
-            if (temp == null) return;
-
-            if (prev != null) {
-                prev.Next = temp.Next;
+            // Do not find the key in the list
+            if (temp == null)
+            {
+                return;
             }
+
+            if (prev != null)
+                prev.Next = temp.Next;
         }
-        // PrintList
-        public void PrintList() {
+
+        public void printList()
+        {
             Node? temp = _head;
-            Console.WriteLine("The singleLinkedList: ");
-            while(temp != null) {
+            Console.Write("The singleLinkedList: ");
+            while ((temp != null))
+            {
                 Console.Write(temp.Data + " ");
                 temp = temp.Next;
             }
-            Console.WriteLine(" ");
-        }
-
-        // Finaliser
-        ~SingleLinkedList() 
-        {
-            // on kill
+            Console.WriteLine("");
         }
     }
-
-    public class DoubleLinkedList
-    {
-        // Fields
-        private Node? _head;
-        private Node? _tail;
-
-        // Constructors
-        public DoubleLinkedList() 
-        {
-            _head = null;
-            _tail = null;
-        }
-
-        // Getters and setters
-        public Node? Head
-        {
-            get { return _head; }
-            set { _head = value; }
-        }
-
-        public Node? Tail
-        {
-            get { return _tail; }
-            set { _tail = value; }
-        }
-
-
-        // Methods
-        // InsertFront
-        public void InsertFront(int newData) {
-            Node newNode = new Node(newData);
-            newNode.Next= _head;
-            _head = newNode;
-        }
-        // InsertLast
-        public void InsertLast(int newData) {
-            Node newNode = new Node(newData);
-            // first check if list is empty
-            if (_head == null) {
-                _head = newNode;
-            } else {
-                Node? lastNode = GetLastNode();
-                if (lastNode != null) {
-                    lastNode.Next = newNode;
-                }
-            }
-        }
-        // GetLastNode
-        public Node? GetLastNode() {
-            Node? temp = _head;
-            while ((temp != null) && (temp.Next != null)) {
-                temp = temp.Next;
-            }
-            return temp;
-        }
-        // InsertAfter
-        public void InsertAfter(Node? preNode, int newData) {
-            if (preNode == null) {
-                Console.WriteLine("The node cannot be null here!");
-            } else {
-                Node newNode = new Node(newData);
-                newNode.Next = preNode.Next;
-                preNode.Next = newNode;
-            }
-        }
-        // FindbyKey
-        public Node? FindbyKey(int data) {
-            Node? temp = _head;
-            while(temp != null) {
-                if (temp.Data == data) {
-                    return temp;
-                }
-                temp = temp.Next;
-            }
-            return null;
-        }
-        // DeleteNodebyKey
-        public void deleteNodebyKey(int key) {
-            Node? temp = _head;
-            Node? prev = null;
-
-            // if key = _head, this means that the searched node is the first one
-            if ((temp != null) && (temp.Data == key)) {
-                _head = temp.Next;
-            }
-
-            while ((temp != null) && (temp.Data != key)) {
-                prev = temp;
-                temp = temp.Next;
-            }
-
-            // case if you don't find key in the list
-            if (temp == null) return;
-
-            if (prev != null) {
-                prev.Next = temp.Next;
-            }
-        }
-        // PrintList
-        public void PrintList() {
-            Node? temp = _head;
-            Console.WriteLine("The singleLinkedList: ");
-            while(temp != null) {
-                Console.Write(temp.Data + " ");
-                temp = temp.Next;
-            }
-            Console.WriteLine(" ");
-        }
-
-        // Finaliser
-        ~DoubleLinkedList() 
-        {
-            // on kill
-        }
-    }
+}
