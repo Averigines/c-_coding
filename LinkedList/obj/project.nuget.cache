@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "KCV4Fnznp9m3Y8H7/AdRWZkfwKMFig6X/f4k28NjC+njKsNL2ZRIyIM7KavdgkN+gRRw1tFFHU1eBQrlds7YCQ==",
+  "dgSpecHash": "jHouLJ/kUPXSd8k58GYV4ZW5/FyvooeZjekMaZhTME8oq6688CuL0QWWrzl+v6J6YDiiCFSj6cc0vYmENzcIlw==",
   "success": true,
   "projectFilePath": "C:\\Users\\pitte\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\LinkedList\\LinkedList.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\pitte\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.14\\microsoft.netcore.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\pitte\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.14\\microsoft.windowsdesktop.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\pitte\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\pitte\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.14\\microsoft.netcore.app.host.win-x64.6.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

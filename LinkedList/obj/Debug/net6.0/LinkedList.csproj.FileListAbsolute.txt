@@ -1,0 +1,15 @@
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\bin\Debug\net6.0\LinkedList.exe
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\bin\Debug\net6.0\LinkedList.deps.json
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\bin\Debug\net6.0\LinkedList.runtimeconfig.json
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\bin\Debug\net6.0\LinkedList.dll
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\bin\Debug\net6.0\LinkedList.pdb
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\obj\Debug\net6.0\LinkedList.csproj.AssemblyReference.cache
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\obj\Debug\net6.0\LinkedList.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\obj\Debug\net6.0\LinkedList.AssemblyInfoInputs.cache
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\obj\Debug\net6.0\LinkedList.AssemblyInfo.cs
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\obj\Debug\net6.0\LinkedList.csproj.CoreCompileInputs.cache
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\obj\Debug\net6.0\LinkedList.dll
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\obj\Debug\net6.0\refint\LinkedList.dll
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\obj\Debug\net6.0\LinkedList.pdb
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\obj\Debug\net6.0\LinkedList.genruntimeconfig.cache
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\LinkedList\obj\Debug\net6.0\ref\LinkedList.dll

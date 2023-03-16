@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "btF7DowbjnVrlTXfUrszLI4xMTU34uYWDJPPNtahO8WIaM3wzyn7Y12TOmCrT7w13lLKLaCcLQWuhKXCab29Cw==",
+  "dgSpecHash": "YbaP4pGJj8nh3OQRJGGboLyAMT9QuAETnBTYYeKSvxqFBWp+wliq4BPMiPu6gY+WDbxXA1LKrUzTCEtEYvuX4A==",
   "success": true,
   "projectFilePath": "C:\\Users\\pitte\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\Snake\\Snake.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\pitte\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.14\\microsoft.netcore.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\pitte\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.14\\microsoft.windowsdesktop.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\pitte\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\pitte\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.14\\microsoft.netcore.app.host.win-x64.6.0.14.nupkg.sha512"
+  ],
   "logs": []
 }
