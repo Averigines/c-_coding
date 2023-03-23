@@ -1,32 +1,74 @@
 ﻿namespace SortingGeneric {
+
+    interface ISort<T> {
+        T[] Sort(T[] arr);
+    }
+
     class Program {
         static void Main(string[] args) {
-
             // Take input from console
-            int[] arr = args[2].Split(',').Select(int.Parse).ToArray<int>();
             if (args[1] == "-Bubble") {
-                BubbleSort(arr);
-                WriteArray(arr, "Sorted Array using BubbleSort: ");
+                if (args[2] == "-String") {
+                    string[] arr = args[3].Split(',');
+                    BubbleSort<string> bs = new BubbleSort<string>();
+                    string[] sortedArr = bs.Sort(arr);
+                    WriteArray(sortedArr, "Sorted Array using BubbleSort: ");
+                }
+                if (args[2] == "-Number") {
+                    int[] arr = args[3].Split(',').Select(int.Parse).ToArray<int>();
+                    BubbleSort<int> bs = new BubbleSort<int>();
+                    int[] sortedArr = bs.Sort(arr);
+                    WriteArray(sortedArr, "Sorted Array using BubbleSort: ");
+                }
             }
-            if (args[1] == "-Merge") {
-                MergeSort(arr, 0, arr.Length-1);
-                WriteArray(arr, "Sorted Array using MergeSort: ");
-            }
-        }
 
-        static void BubbleSort(int[] arr) {
-            for (int i = 0; i < arr.Length-1; i++) {
-                for (int j = 0; j < arr.Length-i-1; j++) {
-                    if (arr[j] > arr[j+1]) {
-                        int temp = arr[j+1];
-                        arr[j+1] = arr[j];
-                        arr[j] = temp;
-                    }
+            if (args[1] == "-Merge") {
+                if (args[2] == "-String") {
+                    string[] arr = args[3].Split(',');
+                    MergeSort<string> ms = new MergeSort<string>();
+                    string[] sortedArr = ms.Sort(arr);
+                    WriteArray(sortedArr, "Sorted Array using BubbleSort: ");
+                }
+                if (args[2] == "-Number") {
+                    int[] arr = args[3].Split(',').Select(int.Parse).ToArray<int>();
+                    MergeSort<int> ms = new MergeSort<int>();
+                    int[] sortedArr = ms.Sort(arr);
+                    WriteArray(sortedArr, "Sorted Array using BubbleSort: ");
                 }
             }
         }
 
-        static void MergeSort(int[] arr, int left, int right) {
+        static void WriteArray<T>(T[] arr, string msg) {
+            Console.Write(msg);
+            for (int i = 0; i < arr.Length; i++) {
+                Console.Write(arr[i] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    class BubbleSort<T> : ISort<T> where T : IComparable<T> {
+        public T[] Sort(T[] arr) {
+            for (int i = 0; i < arr.Length - 1; i++) {
+                for (int j = 0; j < arr.Length - i - 1; j++) {
+                    if (arr[j].CompareTo(arr[j + 1]) > 0) {
+                        T temp = arr[j + 1];
+                        arr[j + 1] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+    }
+
+    class MergeSort<T> : ISort<T> where T : IComparable<T> {
+        public T[] Sort(T[] arr) {
+            MergeSplit(arr, 0, arr.Length - 1);
+            return arr;
+        }
+
+        static void MergeSplit(T[] arr, int left, int right) {
             //left = first index of Array
             //right = last index of Array
 
@@ -34,22 +76,22 @@
             if (left < right) {
                 int mid = (left + right) / 2;
 
-                MergeSort(arr, left, mid);
-                MergeSort(arr, mid + 1, right);
+                MergeSplit(arr, left, mid);
+                MergeSplit(arr, mid + 1, right);
 
                 Merge(arr, left, mid, right);
             }
         }
 
-        static void Merge(int[] arr, int left, int mid, int right) {
+        static void Merge(T[] arr, int left, int mid, int right) {
 
             // Get number of items for both arrays
             int n1 = mid - left + 1;
             int n2 = right - mid;
 
             // Create temporary arrays
-            int[] tempArrLeft = new int[n1];
-            int[] tempArrRight = new int[n2];
+            T[] tempArrLeft = new T[n1];
+            T[] tempArrRight = new T[n2];
 
             int i;
             int j;
@@ -69,7 +111,7 @@
 
             // As long as both subarrays contain items, sort by smaller item and increment index of that subarray
             while (i < n1 && j < n2) {
-                if (tempArrLeft[i] <= tempArrRight[j]) {
+                if (tempArrLeft[i].CompareTo(tempArrRight[j]) <= 0) {
                     arr[k] = tempArrLeft[i];
                     i++;
                 }
@@ -92,15 +134,6 @@
                 j++;
                 k++;
             }
-        }
-
-        // Write result array to console
-        static void WriteArray(int[] arr, string msg) {
-            Console.Write(msg);
-            for (int i = 0; i < arr.Length; i++) {
-                Console.Write(arr[i] + " ");
-            }
-            Console.WriteLine();
         }
     }
 }
