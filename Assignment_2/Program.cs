@@ -11,7 +11,7 @@
         Console.WriteLine("\nIterative solution:");
         MoveIterative(n);
 
-        Console.ReadLine();
+        Console.WriteLine("End of code");
     }
 
     static void MoveRecursive(int n, char from, char to, char aux)
@@ -28,53 +28,46 @@
     }
 
     static void MoveIterative(int n)
+{
+    int moves = (int)Math.Pow(2, n) - 1;
+    Stack<int> A = new Stack<int>(Enumerable.Range(1, n).Reverse());
+    Stack<int> B = new Stack<int>();
+    Stack<int> C = new Stack<int>();
+
+    if (n % 2 == 0)
     {
-        int moves = (int)Math.Pow(2, n) - 1;
-        char from = 'A', to = 'C', aux = 'B';
-
-        if (n % 2 == 0)
-        {
-            char temp = to;
-            to = aux;
-            aux = temp;
-        }
-
-        for (int i = 1; i <= moves; i++)
-        {
-            if (i % 3 == 1)
-            {
-                Console.WriteLine($"Move disk {DiskToMove(i)} from {from} to {to}");
-                MoveDisk(ref from, ref to, ref aux);
-            }
-            else if (i % 3 == 2)
-            {
-                Console.WriteLine($"Move disk {DiskToMove(i)} from {from} to {aux}");
-                MoveDisk(ref from, ref aux, ref to);
-            }
-            else if (i % 3 == 0)
-            {
-                Console.WriteLine($"Move disk {DiskToMove(i)} from {aux} to {to}");
-                MoveDisk(ref aux, ref to, ref from);
-            }
-        }
+        Stack<int> temp = C;
+        C = B;
+        B = temp;
     }
 
-    static void MoveDisk(ref char from, ref char to, ref char aux)
+    for (int i = 1; i <= moves; i++)
     {
-        char temp = to;
-        to = aux;
-        aux = from;
-        from = temp;
-    }
-
-    static int DiskToMove(int move)
-    {
-        int disk = 1;
-        while (move % 2 == 0)
+        if (i % 3 == 1)
         {
-            move /= 2;
-            disk++;
+                MoveDisk(A, C, 'A', 'C');
         }
-        return disk;
+        else if (i % 3 == 2)
+        {
+                MoveDisk(A, B, 'A', 'B');
+        }
+        else if (i % 3 == 0)
+        {
+                MoveDisk(B, C, 'B', 'C');
+        }
     }
+}
+
+static void MoveDisk(Stack<int> from, Stack<int> to, char fromName, char toName)
+{
+    if (from.Count == 0 || (to.Count > 0 && to.Peek() < from.Peek()))
+    {
+        from.Push(to.Pop());
+        Console.WriteLine($"Move disk {from.Peek()} from {toName} to {fromName}");
+    }
+    else {
+        to.Push(from.Pop());
+        Console.WriteLine($"Move disk {to.Peek()} from {fromName} to {toName}");
+    }
+}
 }
