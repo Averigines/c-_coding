@@ -33,27 +33,33 @@
     Stack<int> A = new Stack<int>(Enumerable.Range(1, n).Reverse());
     Stack<int> B = new Stack<int>();
     Stack<int> C = new Stack<int>();
+    char from = 'A';
+    char aux = 'B';
+    char to = 'C';
 
     if (n % 2 == 0)
     {
         Stack<int> temp = C;
         C = B;
         B = temp;
+        char temp2 = to;
+        to = aux;
+        aux = temp2;
     }
 
     for (int i = 1; i <= moves; i++)
     {
         if (i % 3 == 1)
         {
-                MoveDisk(A, C, 'A', 'C');
+                MoveDisk(A, C, from, to);
         }
         else if (i % 3 == 2)
         {
-                MoveDisk(A, B, 'A', 'B');
+                MoveDisk(A, B, from, aux);
         }
         else if (i % 3 == 0)
         {
-                MoveDisk(B, C, 'B', 'C');
+                MoveDisk(B, C, aux, to);
         }
     }
 }
