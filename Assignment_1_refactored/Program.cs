@@ -8,13 +8,13 @@
         static void Main(string[] args) {
             // Take input from console
             if (args[1] == "-Bubble") {
-                if (args[2] == "-String") {
+                if (args[2] == "-string") {
                     string[] arr = args[3].Split(',');
                     BubbleSort<string> bs = new BubbleSort<string>();
                     string[] sortedArr = bs.Sort(arr);
                     WriteArray(sortedArr, "Sorted Array using BubbleSort: ");
                 }
-                if (args[2] == "-Number") {
+                if (args[2] == "-int") {
                     int[] arr = args[3].Split(',').Select(int.Parse).ToArray<int>();
                     BubbleSort<int> bs = new BubbleSort<int>();
                     int[] sortedArr = bs.Sort(arr);
@@ -23,17 +23,17 @@
             }
 
             if (args[1] == "-Merge") {
-                if (args[2] == "-String") {
+                if (args[2] == "-string") {
                     string[] arr = args[3].Split(',');
                     MergeSort<string> ms = new MergeSort<string>();
                     string[] sortedArr = ms.Sort(arr);
-                    WriteArray(sortedArr, "Sorted Array using BubbleSort: ");
+                    WriteArray(sortedArr, "Sorted Array using MergeSort: ");
                 }
-                if (args[2] == "-Number") {
+                if (args[2] == "-int") {
                     int[] arr = args[3].Split(',').Select(int.Parse).ToArray<int>();
                     MergeSort<int> ms = new MergeSort<int>();
                     int[] sortedArr = ms.Sort(arr);
-                    WriteArray(sortedArr, "Sorted Array using BubbleSort: ");
+                    WriteArray(sortedArr, "Sorted Array using MergeSort: ");
                 }
             }
         }

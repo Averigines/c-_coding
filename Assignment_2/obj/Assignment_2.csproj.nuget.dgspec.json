@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pitte\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\Assignment_2\\Assignment_2.csproj": {}
+    "C:\\Users\\Patrick\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\Assignment_2\\Assignment_2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pitte\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\Assignment_2\\Assignment_2.csproj": {
+    "C:\\Users\\Patrick\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\Assignment_2\\Assignment_2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pitte\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\Assignment_2\\Assignment_2.csproj",
+        "projectUniqueName": "C:\\Users\\Patrick\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\Assignment_2\\Assignment_2.csproj",
         "projectName": "Assignment_2",
-        "projectPath": "C:\\Users\\pitte\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\Assignment_2\\Assignment_2.csproj",
-        "packagesPath": "C:\\Users\\pitte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pitte\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\Assignment_2\\obj\\",
+        "projectPath": "C:\\Users\\Patrick\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\Assignment_2\\Assignment_2.csproj",
+        "packagesPath": "C:\\Users\\Patrick\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Patrick\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\Assignment_2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pitte\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Patrick\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -48,30 +48,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.14, 6.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.14, 6.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.14, 6.0.14]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.14, 6.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }

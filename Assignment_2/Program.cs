@@ -1,145 +1,143 @@
-﻿using System;
-using System.Collections;
+﻿class TowerOfHanoi {
 
-class TowerOfHanoi
-{
-    static void Main(string[] args)
-    {
-        Console.Write("Enter the number of disks: ");
-        int n = int.Parse(Console.ReadLine());
+    static void Main(string[] args) {
 
-        Console.WriteLine("\nRecursive solution:");
-        MoveRecursive(n, 'A', 'C', 'B');
+        if (args[1] == "-Recursive") {
+            int disks = int.Parse(args[2]);
+            Console.WriteLine("\nRecursive solution:");
+            HanoiRecursive(disks, 'A', 'B', 'C');
+        }
 
-        Console.WriteLine("\nIterative solution:");
-        MoveIterative(n);
-
-        Console.WriteLine("End of code");
+        if (args[1] == "-Iterative") {
+            int disks = int.Parse(args[2]);
+            Console.WriteLine("\nIterative solution:");
+            HanoiIterative(disks);
+        }
     }
 
-    static void MoveRecursive(int n, char from, char to, char aux)
-    {
-        if (n == 1)
-        {
-            Console.WriteLine($"Move disk 1 from {from} to {to}");
+    static void HanoiRecursive(int disk, char A, char B, char C) {
+        if (disk == 1) {
+            Console.WriteLine($"Move disk 1 from {A} to {C}");
             return;
         }
 
-        MoveRecursive(n - 1, from, aux, to);
-        Console.WriteLine($"Move disk {n} from {from} to {to}");
-        MoveRecursive(n - 1, aux, to, from);
+        HanoiRecursive(disk - 1, A, C, B);
+
+        Console.WriteLine($"Move disk {disk} from {A} to {C}");
+
+        HanoiRecursive(disk - 1, B, A, C);
     }
 
-    static void MoveIterative(int n)
-{
-    int moves = (int)Math.Pow(2, n) - 1;
-    Stack<int> A = new Stack<int>(Enumerable.Range(1, n).Reverse());
-    Stack<int> B = new Stack<int>();
-    Stack<int> C = new Stack<int>();
-    char from = 'A';
-    char aux = 'B';
-    char to = 'C';
+    static void HanoiIterative(int disks) {
+        int moves = (int)Math.Pow(2, disks) - 1;
 
-    if (n % 2 == 0)
-    {
-        Stack<int> temp = C;
-        C = B;
-        B = temp;
-        char temp2 = to;
-        to = aux;
-        aux = temp2;
-    }
+        Stack<int> A = new Stack<int>(Enumerable.Range(1, disks).Reverse());
+        Stack<int> B = new Stack<int>();
+        Stack<int> C = new Stack<int>();
 
-    WriteASCII(A, B, C, n);
-    for (int i = 1; i <= moves; i++)
-    {
-        if (i % 3 == 1)
-        {
-                MoveDisk(A, C, from, to);
-                //WriteASCII(A, B, C, n);
+        if (disks % 2 == 0) {
+            Stack<int> temp = C;
+            C = B;
+            B = temp;
         }
-        else if (i % 3 == 2)
-        {
-                MoveDisk(A, B, from, aux);
-                //WriteASCII(A, B, C, n);
-        }
-        else if (i % 3 == 0)
-        {
-                MoveDisk(B, C, aux, to);
-                //WriteASCII(A, B, C, n);
-        }
-        WriteASCII(A, B, C, n);
-    }
-}
 
-static void MoveDisk(Stack<int> from, Stack<int> to, char fromName, char toName)
-{
-    if (from.Count == 0 || (to.Count > 0 && to.Peek() < from.Peek()))
-    {
-        from.Push(to.Pop());
-        //Console.WriteLine($"Move disk {from.Peek()} from {toName} to {fromName}");
-    }
-    else {
-        to.Push(from.Pop());
-        //Console.WriteLine($"Move disk {to.Peek()} from {fromName} to {toName}");
-    }
-}
+        WriteASCII(A, B, C, disks);
 
-static void WriteASCII(Stack<int> A, Stack<int> B, Stack<int> C, int disks) {
-    List<int> ListA = A.ToList();
-    List<int> ListB;
-    List<int> ListC;
-    if (disks % 2 == 0) {
-        ListC = B.ToList();
-        ListB = C.ToList();
-    }
-    else {
-        ListB = B.ToList();
-        ListC = C.ToList();
-    }
-    string ascii = "**";
-
-    for (int i = 0; i < disks; i++) {
-        string asciiLine = "|  ";
-        if (ListA.Count() >= disks - i) {
-             int valueA = ListA[0];
-             ListA.RemoveAt(0);
-             for (int j = 0; j < valueA; j++) {
-                asciiLine += ascii;
-             }
-             //asciiLine += $"{valueA}";
-             //Console.WriteLine($"|  {valueA}  |    |    |");
+        for (int i = 1; i <= moves; i++) {
+            if (i % 3 == 1) {
+                    MoveDisk(A, C);
+            }
+            else if (i % 3 == 2) {
+                    MoveDisk(A, B);
+            }
+            else if (i % 3 == 0) {
+                    MoveDisk(B, C);
+            }
+            WriteASCII(A, B, C, disks);
         }
-        asciiLine += "  |  ";
-
-        if (ListB.Count() >= disks - i) {
-             int valueB = ListB[0];
-             ListB.RemoveAt(0);
-             for (int j = 0; j < valueB; j++) {
-                asciiLine += ascii;
-             }
-             //asciiLine += $"{valueB}";
-             //Console.WriteLine($"|  {valueA}  |    |    |");
-        }
-        
-        asciiLine += "  |  ";
-
-        if (ListC.Count() >= disks - i) {
-             int valueC = ListC[0];
-             //string stringB = new String("*", 5);
-             ListC.RemoveAt(0);
-             for (int j = 0; j < valueC; j++) {
-                asciiLine += ascii;
-             }
-             //asciiLine += $"{valueC}";
-             //Console.WriteLine($"|  {valueA}  |    |    |");
-        }
-        
-        asciiLine += "  |";
-        //Console.SetCursorPosition(Console.WindowWidth/3, Console.WindowHeight);
-        Console.WriteLine(asciiLine);
-        
     }
-    Console.WriteLine("------------------------------------------------------------------------------");
-}
+
+    static void MoveDisk(Stack<int> from, Stack<int> to) {
+        if (from.Count == 0 || (to.Count > 0 && to.Peek() < from.Peek())) {
+            from.Push(to.Pop());
+        }
+        else {
+            to.Push(from.Pop());
+        }
+    }
+
+    static void WriteASCII(Stack<int> A, Stack<int> B, Stack<int> C, int disks) {
+        List<int> ListA = A.ToList();
+        List<int> ListB;
+        List<int> ListC;
+
+        if (disks % 2 == 0) {
+            ListC = B.ToList();
+            ListB = C.ToList();
+        }
+        else {
+            ListB = B.ToList();
+            ListC = C.ToList();
+        }
+
+        string symbol = "**";
+        string spacesIfEmpty = "";
+        for (int i = 0; i < disks; i++) {
+            spacesIfEmpty += "  ";
+        }
+
+        Console.WriteLine();
+
+        for (int i = 0; i < disks; i++) {
+
+            string output = "|  ";
+
+            if (ListA.Count() >= disks - i) {
+                output += JoinOutput(ListA, disks, symbol);
+            }
+            else {
+                output += spacesIfEmpty;
+            }
+
+            output += "  |  ";
+
+            if (ListB.Count() >= disks - i) {
+                output += JoinOutput(ListB, disks, symbol);
+            }
+            else {
+                output += spacesIfEmpty;
+            }
+
+            output += "  |  ";
+
+            if (ListC.Count() >= disks - i) {
+                output += JoinOutput(ListC, disks, symbol);
+            }
+            else {
+                output += spacesIfEmpty;
+            }
+            
+            output += "  |";
+            Console.WriteLine(output);
+            
+        }
+        Console.WriteLine("------------------------------------------------------------------------------");
+    }
+
+    static string JoinOutput(List<int> currPeg, int disks, string symbol) {
+
+        string output = "";
+        int value = currPeg[0];
+        currPeg.RemoveAt(0);
+        for (int j = 0; j < disks - value; j++) {
+            output += " ";
+        }
+        for (int j = 0; j < value; j++) {
+            output += symbol;
+        }
+        for (int j = 0; j < disks - value; j++) {
+            output += " ";
+        }
+        return output;
+    }
 }

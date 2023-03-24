@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/5yKKLYFRPWz5b1aNrt9uVI5fb/hgGqUI0XJrz4iT3rRUDTPzoyi0U901LKuOHUK/3rvBiT9wlT2SdBJZXo1RA==",
+  "dgSpecHash": "2N/6dKjqJ/QiPiOdDD/MWOdOVYxvAjoZAeHDsWQhnekwmM+prhQUYPAn/5zfuuYpDLmMeHs/nmMcDv4B+tihUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pitte\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\Assignment_2\\Assignment_2.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\pitte\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.14\\microsoft.netcore.app.ref.6.0.14.nupkg.sha512",
-    "C:\\Users\\pitte\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.14\\microsoft.windowsdesktop.app.ref.6.0.14.nupkg.sha512",
-    "C:\\Users\\pitte\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512",
-    "C:\\Users\\pitte\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.14\\microsoft.netcore.app.host.win-x64.6.0.14.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\Patrick\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\Assignment_2\\Assignment_2.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
