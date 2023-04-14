@@ -1,0 +1,15 @@
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\bin\Debug\net7.0\WorkWithText.exe
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\bin\Debug\net7.0\WorkWithText.deps.json
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\bin\Debug\net7.0\WorkWithText.runtimeconfig.json
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\bin\Debug\net7.0\WorkWithText.dll
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\bin\Debug\net7.0\WorkWithText.pdb
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\obj\Debug\net7.0\WorkWithText.csproj.AssemblyReference.cache
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\obj\Debug\net7.0\WorkWithText.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\obj\Debug\net7.0\WorkWithText.AssemblyInfoInputs.cache
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\obj\Debug\net7.0\WorkWithText.AssemblyInfo.cs
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\obj\Debug\net7.0\WorkWithText.csproj.CoreCompileInputs.cache
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\obj\Debug\net7.0\WorkWithText.dll
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\obj\Debug\net7.0\refint\WorkWithText.dll
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\obj\Debug\net7.0\WorkWithText.pdb
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\obj\Debug\net7.0\WorkWithText.genruntimeconfig.cache
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\WorkWithText\obj\Debug\net7.0\ref\WorkWithText.dll
