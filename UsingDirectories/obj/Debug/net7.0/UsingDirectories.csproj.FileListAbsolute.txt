@@ -1,0 +1,15 @@
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\bin\Debug\net7.0\UsingDirectories.exe
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\bin\Debug\net7.0\UsingDirectories.deps.json
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\bin\Debug\net7.0\UsingDirectories.runtimeconfig.json
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\bin\Debug\net7.0\UsingDirectories.dll
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\bin\Debug\net7.0\UsingDirectories.pdb
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\obj\Debug\net7.0\UsingDirectories.csproj.AssemblyReference.cache
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\obj\Debug\net7.0\UsingDirectories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\obj\Debug\net7.0\UsingDirectories.AssemblyInfoInputs.cache
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\obj\Debug\net7.0\UsingDirectories.AssemblyInfo.cs
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\obj\Debug\net7.0\UsingDirectories.csproj.CoreCompileInputs.cache
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\obj\Debug\net7.0\UsingDirectories.dll
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\obj\Debug\net7.0\refint\UsingDirectories.dll
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\obj\Debug\net7.0\UsingDirectories.pdb
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\obj\Debug\net7.0\UsingDirectories.genruntimeconfig.cache
+C:\Users\pitte\OneDrive - Fachhochschule St. Pölten\Studium\4. Semester\C#\c#_coding\UsingDirectories\obj\Debug\net7.0\ref\UsingDirectories.dll
