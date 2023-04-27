@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Y/HU4Ho1OUbMcRtu0B6ovPjpUBuG0khs+uV2zeZSAXriHAg8LU7mgathjWz150YzWz/qVyR9oSKVjMdGxd2RoQ==",
+  "dgSpecHash": "a4jXL8GcvrFmPX0IGUXr3mxlbOmUtxxB/bEcRuVGc9JM+UcD6zxwVppVAM5XcZoAGu5c0gwFB9hQpGMRFYZQuQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Patrick\\OneDrive - Fachhochschule St. Pölten\\Studium\\4. Semester\\C#\\c#_coding\\FinalProject\\FinalProject.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Patrick\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.12\\microsoft.netcore.platforms.2.1.12.nupkg.sha512",
+    "C:\\Users\\Patrick\\.nuget\\packages\\microsoft.win32.systemevents\\4.5.0\\microsoft.win32.systemevents.4.5.0.nupkg.sha512",
+    "C:\\Users\\Patrick\\.nuget\\packages\\system.drawing.common\\4.5.2\\system.drawing.common.4.5.2.nupkg.sha512"
+  ],
   "logs": []
 }
