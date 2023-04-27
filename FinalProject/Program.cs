@@ -9,6 +9,7 @@ namespace FinalProject {
         static int newColor = 0;
         static int startX = 0;
         static int startY = 0;
+ 
 	    public static void Main(string[] args) {
 
 		    int[,] grid = ReadInput("input.txt"); // Get input data
@@ -23,7 +24,7 @@ namespace FinalProject {
             List<List<int>> rows = new List<List<int>>(); // List to store values
 
             using (StreamReader sr = new StreamReader(filename)) {
-                string line;
+                string? line;
                 // Get complete line of textfile
                 while ((line = sr.ReadLine()) != null) {
                     
@@ -98,6 +99,9 @@ namespace FinalProject {
             // Create a new Queue and enqueue the starting point.
     	    Queue<(int, int)> queue = new Queue<(int, int)>();
     	    queue.Enqueue((x, y));
+
+            int maxColumn = grid.GetLength(0) - 1;
+            int maxRow = grid.GetLength(1) - 1;
     
             /*
             As long as there is a value in the queue, dequeue last value in queue
@@ -107,12 +111,47 @@ namespace FinalProject {
     	    while (queue.Count > 0) {
         	    (int currX, int currY) = queue.Dequeue();
         	    grid[currX, currY] = newColor;
+                AnimateProgress(grid, currX, currY);
 
         	    if (currX > 0 && grid[currX - 1, currY] == oldColor) queue.Enqueue((currX - 1, currY));
-        	    if (currX < 6 && grid[currX + 1, currY] == oldColor) queue.Enqueue((currX + 1, currY));
+        	    if (currX < maxColumn && grid[currX + 1, currY] == oldColor) queue.Enqueue((currX + 1, currY));
         	    if (currY > 0 && grid[currX, currY - 1] == oldColor) queue.Enqueue((currX, currY - 1));
-        	    if (currY < 6 && grid[currX, currY + 1] == oldColor) queue.Enqueue((currX, currY + 1));
+        	    if (currY < maxRow && grid[currX, currY + 1] == oldColor) queue.Enqueue((currX, currY + 1));
     	    }
+            AnimateFinal(grid);
 	    }
+
+        static void AnimateProgress(int[,] grid, int x, int y) {
+            Console.Clear();
+            Console.WriteLine("Current Grid: ");
+            for (int i = 0; i < grid.GetLength(0); i++) {
+                for (int j = 0; j < grid.GetLength(1); j++) {
+                    if (x == i && y == j) Console.ForegroundColor = ConsoleColor.Red; //red color for currently changed value
+                    else if (grid[i, j] == newColor) Console.ForegroundColor = ConsoleColor.Blue; //blue color for all values changed so far
+                    else Console.ResetColor(); // standard color for all other values
+
+                    Console.Write(grid[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            Thread.Sleep(500);
+        }
+
+        static void AnimateFinal(int[,] grid) {
+            Console.Clear();
+            Console.WriteLine("Final Grid: ");
+            for (int i = 0; i < grid.GetLength(0); i++) {
+                for (int j = 0; j < grid.GetLength(1); j++) {
+                    if (grid[i, j] == newColor) Console.ForegroundColor = ConsoleColor.Blue; //blue color for all values changed
+                    else Console.ResetColor(); // standard color for all other values
+
+                    Console.Write(grid[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            Thread.Sleep(500);
+        }
+
+        
     }
 }
