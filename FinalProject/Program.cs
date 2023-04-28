@@ -21,7 +21,7 @@ namespace FinalProject
 
             GenerateInput.DrawInput(grid, g, bmp);
 
-            Console.Write("Enter a new color (Choose one between the following: Black, Blue, Cyan, DarkBlue, DarkCyan, DarkGray, DarkGreen, DarkMagenta, DarkRed, DarkYellow, Gray, Green, Magenta, Red, White, Yellow): ");
+            Console.Write("Enter a new color (Choose one between the following: Black, Blue, Cyan, DarkBlue, DarkCyan, DarkGray, DarkGreen, DarkMagenta, DarkRed, Gray, Green, Magenta, Red, White, Yellow): ");
             newColor = Console.ReadLine()!;
 
             Console.Write($"Enter the starting X coordinate (Min: 0, Max: {grid.GetLength(1) - 1}): ");

@@ -1,8 +1,8 @@
-Magenta Magenta Blue Blue Green Yellow Yellow Yellow Yellow 
-Magenta Magenta Blue Blue Green Green Green Yellow Yellow 
-Magenta Magenta Magenta Blue Green Green Green Yellow Yellow 
-Magenta Magenta Magenta Blue Blue Green Green Yellow Yellow 
-Yellow Yellow Magenta Blue Blue Blue Green Green Green 
+Green Green Blue Blue Green Yellow Yellow Yellow Yellow 
+Green Green Blue Blue Green Green Green Yellow Yellow 
+Green Green Green Blue Green Green Green Yellow Yellow 
+Green Green Green Blue Blue Green Green Yellow Yellow 
+Yellow Yellow Green Blue Blue Blue Green Green Green 
 Yellow Yellow Yellow Red Blue Blue Blue Green Green 
 Yellow Yellow Yellow Yellow Red Blue Blue Green Green 
 Yellow Yellow Yellow Yellow Yellow Red Green Green Green 
